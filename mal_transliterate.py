@@ -41,7 +41,7 @@ __modifiers = {
 	"ു": "u", "ൂ": "ū", "ൃ": "ṛ",
 	"െ": "e", "േ": "ē", "ൈ": "ai",
 	"ൊ": "o", "ോ": "ō","ൌ": "au", "ൗ": "au",
-	"ഃ": "ḥ"
+	"ഃ": "ḥ", "്യ": "ya"
 }
 
 
@@ -92,10 +92,6 @@ def transliterate(input):
 	# replace any stray modifiers that may have been left out
 	for k, v in __modifiers.items():
 		input = input.replace( k, v )
-
-	# capitalize first letter of sentences for better aeshetics
-	chunks = re.split('([.!?] *)', input)
-	input = ''.join([w.capitalize() for w in chunks])
 
 	return input
 
